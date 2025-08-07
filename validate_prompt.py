@@ -7,8 +7,8 @@ from openai import OpenAI
 
 def main():
     # Load your API key from an environment variable
-    openai.api_key = os.getenv("OPENAI_API_KEY")
-    if openai.api_key is None:
+    OpenAI.api_key = os.getenv("OPENAI_API_KEY")
+    if OpenAI.api_key is None:
         raise ValueError("Please set the OPENAI_API_KEY environment variable")
 
     # Send a simple chat completion request
