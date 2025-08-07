@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 
 """Basic script using the OpenAI Python package to say 'hello world'."""
-
+from dotenv import load_dotenv
 import os
 from openai import OpenAI
 
 def main():
     # Load your API key from an environment variable
+    load_dotenv()
     OpenAI.api_key = os.getenv("OPENAI_API_KEY")
     if OpenAI.api_key is None:
         raise ValueError("Please set the OPENAI_API_KEY environment variable")
